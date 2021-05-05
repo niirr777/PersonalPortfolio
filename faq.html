@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="/Assignment1/css/Home.css">
+    <link rel="stylesheet" href="/faq.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <center>
+        <header>
+            <h1 id="A">APIPA DANCE COMPANY</h1>
+            <div>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Classes.html">Classes</a></li>
+                    <li><a href="About_us.html">About us</a></li>
+                    <li><a href="Contact_us.html">Contact us</a></li>
+                    <li><a href="Home.html">FAQ</a></li>
+
+                </ul>
+            </div>
+        </header>
+
+        <html lang="en">
+
+        <body>
+
+            <section id="faq">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <h2>At what age can I sign up my child for dance classes? </h2>
+                            <i class="material-icons add">add_circle_outline</i>
+                            <i class="material-icons remove">remove_circle_outline</i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>We offer Intro to Dance for 4- to 6-year-olds. This class introduces youngsters to basic dance vocabulary, teaches dance class etiquette, and develops coordination and strength.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <h2>What is the fastest way to become a better dancer?</h2>
+                            <i class="material-icons add">add_circle_outline</i>
+                            <i class="material-icons remove">remove_circle_outline</i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>The key to improving your dance skills is a well-rounded, balanced program that incorporates all aspects of dance instruction. We have a 3-part system: group classes, private lessons, and social dance parties. Utilizing all
+                                three will help you progress quickly, as each service compliments the other.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <h2>What should I wear for class?</h2>
+                            <i class="material-icons add">add_circle_outline</i>
+                            <i class="material-icons remove">remove_circle_outline</i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Dancing is about movement and enjoyment. We recommend wearing comfortable clothing that allows you to be flexible and relaxed. You can wear anything you want for your first lesson. Afterwards, we will recommend something based
+                                on the style and direction you choose. Please avoid stilettos or shoes with sharp heels as those are not comfortable to dance in, and they may damage our floor.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <h2>Do you offer any specialized training?</h2>
+                            <i class="material-icons add">add_circle_outline</i>
+                            <i class="material-icons remove">remove_circle_outline</i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Yes. We also offer specialized classes to complement what you are learning in your dance program, including presentation and styling.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <h2>Do you accept people with disabilities?</h2>
+                            <i class="material-icons add">add_circle_outline</i>
+                            <i class="material-icons remove">remove_circle_outline</i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Absolutely! We believe everyone should dance. We accept and welcome people with disabilities. In fact, many of our instructors are certified to teach aspiring wheelchair dancers. We even work with children who have learning
+                                disabilities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-title">
+                            <h2>What is your cancellation policy?
+                            </h2>
+                            <i class="material-icons add">add_circle_outline</i>
+                            <i class="material-icons remove">remove_circle_outline</i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>We make every effort to accommodate the schedules of our students. We also work hard to retain the best teachers in the industry. In order to protect the time of our teachers, we have a 24-hour cancelation policy, so please
+                                let us know in advance of cancelations to avoid being charged.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="script.js"></script>
+            </section>
+
+        </body>
+
+        </html>
+
+
+
+        <footer class="about-section">
+
+            <center>Designed by TyMCA Students, 2020 copyright</center>
+        </footer>
+
+
+        <script>
+            const questions = document.getElementsByClassName('accordion-title') //Gets all the questions (plus icon)
+
+            for (const question of questions) {
+                const answer = question.parentElement.querySelector('.accordion-content')
+                const remove = question.parentElement.querySelector(".remove")
+                const add = question.parentElement.querySelector(".add")
+                let open = false //Variable to check if the answer is visible or not
+
+                function openAnswer() {
+                    if (open == true) { //If you click the question while the answer is visible it will stop being visible and open will change it's value to false
+                        add.style.display = "block";
+                        remove.style.display = "none";
+                        answer.style.overflow = "hidden";
+                        answer.style.maxHeight = '0';
+                        open = false;
+                    } else { //If you click the question while the answer is not visible it will start being visible and open will change it's value to true
+                        add.style.display = "none";
+                        remove.style.display = "block";
+                        answer.style.maxHeight = "300px";
+                        answer.style.overflow = "visible";
+                        open = true;
+                    }
+                }
+
+                question.addEventListener('click', openAnswer)
+            }
+        </script>
+
+
+
+</body>
+
+
+
+
+</html>>

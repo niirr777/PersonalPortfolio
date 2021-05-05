@@ -1,0 +1,102 @@
+/*FAQ section, where the accordion is kept, including section specific css*/
+
+
+#faq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#faq .add {
+    /*Add is the name for the plus icon*/
+    display: block;
+}
+
+#faq .remove {
+    /*Remove is the name for the less icon*/
+    display: none;
+}
+
+#faq i {
+    font-size: 30px;
+}
+
+
+/*Accordion container and each item*/
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;  
+    padding: 0 1.5rem;
+    margin-top: 5px;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+    padding: 5px;
+    /* max-width: 300px; */
+}
+
+
+/*Styles for the question*/
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.accordion-title:hover {
+    color: blue;
+}
+
+.accordion-title h2 {
+    width: 50%;
+    
+}
+
+
+/*Styles for the answer*/
+
+.accordion-content {
+    max-height:0;
+    /* margin-left: 1px; */
+    overflow: hidden;
+    position: relative;
+    background-color:black;
+    transition: max-height 1.5s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.accordion-content p {
+    padding: 10px;
+    color: white;
+    text-align: left;
+}
+ .blog-titlee{
+    text-align: center;
+    
+    margin-top: -10px; 
+}
+
+
+
+
+
+
+/*
+
+ 
